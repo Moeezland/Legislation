@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Legislation Verification</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="assets/logo.png" class="logo">
+
+    <h1>Official Legislation Verification</h1>
+
+    <p class="subtitle">
+        Constitutional Emirate of Moeezland
+    </p>
+
+    <div id="loading">
+
+        <div class="spinner"></div>
+
+        <p>Verifying legislation...</p>
+
+    </div>
+
+    <div id="verified" style="display:none;">
+
+        <div class="badge success">
+            ✓ VERIFIED
+        </div>
+
+        <div class="card">
+
+            <div class="row">
+                <span>Document ID</span>
+                <strong id="documentId"></strong>
+            </div>
+
+            <div class="row">
+                <span>Gazette</span>
+                <strong id="gazette"></strong>
+            </div>
+
+            <div
+                class="row"
+                id="decreeRow"
+                style="display:none;"
+            >
+                <span>Emiri Decree</span>
+                <strong id="decree"></strong>
+            </div>
+
+            <div class="row">
+                <span>Status</span>
+                <strong id="status"></strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="failed" style="display:none;">
+
+        <div class="badge failed">
+            ✕ VERIFICATION FAILED
+        </div>
+
+        <p>
+            This legislation could not be found in the
+            Official Legislation Database.
+        </p>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/verify.js"></script>
+
+</body>
+</html>
